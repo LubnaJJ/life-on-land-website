@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Life on Land</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+      color: #2e7d32;
+      overflow: hidden;
+    }
+
+    .loader-wrapper {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .loader {
+      border: 8px solid #c8e6c9;
+      border-top: 8px solid #388e3c;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    
+    .container {
+      padding: 50px 30px;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .mission {
+      font-size: 1.2rem;
+      background-color: #c8e6c9;
+      padding: 20px 30px;
+      margin: 0 auto 40px;
+      border-left: 6px solid #388e3c;
+      border-radius: 12px;
+      max-width: 900px;
+      font-weight: 500;
+      color: #1b5e20;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 2rem;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    h2::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background-color: #66bb6a;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .tile {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 220px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .tile img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .tile p {
+      margin: 0;
+      padding: 15px;
+      font-weight: bold;
+      color: #2e7d32;
+      font-size: 1rem;
+    }
+
+    footer {
+      background-color: #f1f8e9;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #558b2f;
+    }
+
+    footer a {
+      color: #558b2f;
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.querySelector('.loader-wrapper');
+      loader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Animated Loader -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="logo-container">
+      <img src="images/logo1.png" alt="Life on Land logo: tree and nature symbol" class="logo" />
+      <h1>Life on Land</h1>
+    </div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="home.html" class="active">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="profile.html">Profile</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="mission" aria-label="Website Mission">
+      We are committed to supporting <strong>UN Sustainable Development Goal 15: Life on Land</strong>, by raising awareness and encouraging real action toward reforestation, biodiversity conservation, and land restoration. Our platform provides engaging and accessible content to educate communities and promote sustainable land use practices globally and locally. By connecting volunteers, sharing knowledge, and showcasing impact stories, we aim to inspire collective responsibility to restore Earth’s ecosystems.
+    </div>
+
+    <h2>Explore Our Topics</h2>
+    <div class="tiles" role="navigation" aria-label="Topic Navigation">
+      <a href="content_ST1.html" class="tile">
+        <img src="images/forest.jpg" alt="Forest Conservation image" />
+        <p>Forest Conservation</p>
+      </a>
+      <a href="content_ST2.html" class="tile">
+        <img src="images/biodiversity.jpg" alt="Biodiversity Awareness image" />
+        <p>Biodiversity Awareness</p>
+      </a>
+      <a href="content_ST3.html" class="tile">
+        <img src="images/land.jpeg" alt="Land Restoration image" />
+        <p>Land Restoration</p>
+      </a>
+      <a href="content_ST4.html" class="tile">
+        <img src="images/community.jpg" alt="Community Engagement image" />
+        <p>Community Engagement</p>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST2.html">Page Editor - Student 2</a></p>
+  </footer>
+
+</body>
+</html>

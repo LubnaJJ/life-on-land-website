@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="refresh" content="4; url=home.html" /> --> <!-- Redirect temporarily disabled -->
+    <title>Life on Land - SDG 15</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url('images/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px 20px;
+            margin: 0 10%;
+            border-radius: 15px;
+        }
+
+        /* Logo shining animation */
+        .logo {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(139, 195, 74, 0.6);
+        }
+
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.6) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-20deg);
+            animation: shine 2.5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -75%;
+            }
+            100% {
+                left: 125%;
+            }
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        /* Mission text styling */
+        p strong {
+            font-weight: 700;
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #a5d6a7;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+            font-weight: 600;
+            color: #dcedc8;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Loader - commented out */
+        /*
+        .loader {
+            margin: 30px auto;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #8bc34a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        */
+
+        .team-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            color: #333;
+            width: 220px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+            border: 3px solid #8bc34a;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+        }
+
+        .card small {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .card .social {
+            margin-top: 10px;
+        }
+
+        .card .social a {
+            margin: 0 5px;
+            color: #8bc34a;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .card .social a:hover {
+            color: #558b2f;
+        }
+    </style>
+    <!-- FontAwesome CDN for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo1.png" alt="Life on Land Logo" class="logo" />
+        <h1>Life on Land (SDG 15)</h1>
+        <p><strong>Mission:</strong> Protecting, restoring and promoting sustainable ecosystems, managing forests, and halting biodiversity loss.</p>
+
+        <!-- <div class="loader" aria-label="Loading..."></div> -->
+
+        <div class="team-cards">
+            <div class="card">
+                <img src="images/aqeel.jpeg" alt="Aqeel" />
+                <h3>Aqeel</h3>
+                <small>Student 1</small>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/cow.jpg" alt="Zahra" />
+                <h3>second</h3>
+                <small>Student 2</small>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/cow.jpg" alt="Imran" />
+                <h3>third</h3>
+                <small>Student 3</small>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/cow.jpg" alt="Nuwani" />
+                <h3>fourth</h3>
+                <small>Student 4</small>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

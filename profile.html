@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - Life on Land</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      display: flex;
+      flex: 1;
+      background-color: #f9fff9;
+    }
+
+    .sidebar {
+      width: 380px;
+      background-color: white;
+      padding: 30px 20px;
+      box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #8bc34a;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      color: #33691e;
+      margin-bottom: 5px;
+    }
+
+    .sidebar p {
+      text-align: center;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .sidebar section {
+      margin-top: 30px;
+    }
+
+    .sidebar h3 {
+      color: #558b2f;
+      margin-bottom: 10px;
+    }
+
+    .bar-vertical {
+      background: #c8e6c9;
+      width: 100%;
+      height: 100px;
+      position: relative;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .bar-vertical span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #558b2f;
+      color: white;
+      text-align: center;
+      line-height: 20px;
+      font-size: 0.75rem;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 40px 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #33691e;
+      margin-bottom: 15px;
+    }
+
+    ul.vol-list, ul.interest-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    ul.vol-list li, ul.interest-icons li {
+      background: #f1f8e9;
+      padding: 10px 15px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    ul.interest-icons i {
+      font-size: 1.5rem;
+      color: #8bc34a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #8bc34a;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: inherit;
+    }
+
+    form button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #558b2f;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #33691e;
+    }
+
+    footer {
+      background-color: #558b2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: #c8e6c9;
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background-color: #8bc34a;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .site-header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    nav.main-nav {
+      text-align: center;
+      background-color: #7cb342;
+      padding: 10px;
+    }
+
+    nav.main-nav a {
+      margin: 0 10px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav.main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .calendar-cell {
+  padding: 10px;
+  background: #e8f5e9;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="images/logo1.png" alt="Logo" />
+    <h1 style="color: white;">User Profile</h1>
+  </header>
+
+  <nav class="main-nav">
+    <a href="home.html">Home</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="content_ST1.html">Content</a>
+    <a href="team.html">Team</a>
+  </nav>
+
+  <main>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <img src="images/aqeel.jpeg" alt="Photo of Aqeel" class="avatar" />
+    <h2>Aqeel</h2>
+    <p>Web Designer & Developer</p>
+
+    <!-- About -->
+    <section>
+      <h3>About Me</h3>
+      <p>I am deeply passionate about sustainability and digital inclusion. I enjoy building meaningful projects that make a real-world impact — especially around nature and conservation.</p>
+    </section>
+
+    <!-- Profile Info (Skills, Goals, Frustrations) -->
+    <section>
+      <h3>Skills</h3>
+      <p>HTML/CSS</p>
+      <div class="bar-vertical"><span style="height: 90%;">90%</span></div>
+      <p>JavaScript</p>
+      <div class="bar-vertical"><span style="height: 65%;">65%</span></div>
+      <p>UI/UX</p>
+      <div class="bar-vertical"><span style="height: 75%;">75%</span></div>
+
+     
+    </section>
+  </aside>
+
+  <!-- Main Content -->
+  <section class="content">
+
+    <!-- Row 1: Volunteering & Interests -->
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px;">
+  <!-- Volunteering -->
+  <div class="card volunteering" style="flex: 1;">
+    <h3>Volunteering</h3>
+    <ul class="vol-list">
+      <li>
+        <img src="images/treeplanting.jpg" alt="Tree planting icon" width="24">
+        Tree Planting Campaign
+      </li>
+      <li>
+        <img src="images/beachcleanup.jpg" alt="Beach cleanup icon" width="24">
+        Coastal Cleanups
+      </li>
+      <li>
+        <img src="images/forest.jpg" alt="Wildlife education icon" width="24">
+        Wildlife Workshops
+      </li>
+    </ul>
+  </div>
+
+  <!-- Interests -->
+  <div class="card interests" style="flex: 1;">
+    <h3>Interests</h3>
+    <ul class="interest-icons">
+      <li><i class="fas fa-leaf" aria-label="Nature"></i> Nature</li>
+      <li><i class="fas fa-globe" aria-label="Sustainability"></i> Sustainability</li>
+      <li><i class="fas fa-recycle" aria-label="Recycling and waste reduction"></i> Recycling</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Row 2: Goals & Frustrations -->
+<div style="display: flex; flex-wrap: wrap; gap: 30px;">
+  <!-- Goals -->
+  <div class="card" style="flex: 1;">
+    <h3>Goals</h3>
+    <ul style="padding-left: 20px; color: #444;">
+      <li>Build eco-friendly, responsive websites</li>
+      <li>Support digital awareness for SDG 15</li>
+      <li>Complete my design portfolio by September</li>
+    </ul>
+  </div>
+
+  <!-- Frustrations -->
+  <div class="card" style="flex: 1;">
+    <h3>Frustrations</h3>
+    <ul style="padding-left: 20px; color: #444;">
+      <li>Slow adoption of sustainable practices</li>
+      <li>Limited collaboration on conservation efforts</li>
+      <li>Accessibility often being overlooked in web design</li>
+    </ul>
+  </div>
+</div>
+
+
+    <!-- Availability + Contact Side by Side -->
+<div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
+
+  <!-- Calendar Style Availability -->
+  <div class="card" style="flex: 1;">
+    <h3>Weekly Availability</h3>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+      <div style="background: #8bc34a; color: white; padding: 10px; border-radius: 8px;"><strong>Day</strong></div>
+      <div style="background: #c8e6c9; padding: 10px; border-radius: 8px;">Morning</div>
+      <div style="background: #c8e6c9; padding: 10px; border-radius: 8px;">Afternoon</div>
+      <div style="background: #c8e6c9; padding: 10px; border-radius: 8px;">Evening</div>
+
+      <div style="background: #f1f8e9; padding: 10px;">Monday</div>
+      <div>✔</div>
+      <div>✔</div>
+      <div></div>
+
+      <div style="background: #f1f8e9; padding: 10px;">Tuesday</div>
+      <div></div>
+      <div>✔</div>
+      <div>✔</div>
+
+      <div style="background: #f1f8e9; padding: 10px;">Wednesday</div>
+      <div>✔</div>
+      <div>✔</div>
+      <div>✔</div>
+
+      <div style="background: #f1f8e9; padding: 10px;">Thursday</div>
+      <div>✔</div>
+      <div></div>
+      <div></div>
+
+      <div style="background: #f1f8e9; padding: 10px;">Friday</div>
+      <div></div>
+      <div>✔</div>
+      <div>✔</div>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="card" style="flex: 1;">
+    <h3>Contact Me</h3>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Phone Number" />
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <div>
+        <button type="submit">Send</button>
+        <button type="reset" style="background:#c62828;">Reset</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
+  </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST4.html">Nuwani’s Page Editor</a></p>
+  </footer>
+
+</body>
+</html>
