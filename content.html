@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content - Life on Land</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f8e9;
+      color: #333;
+    }
+
+  
+
+
+    .content-wrapper {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      background: #fff;
+      width: 220px;
+      padding: 30px 20px;
+      border-right: 2px solid #c5e1a5;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+
+    .sidebar h3 {
+      font-size: 1rem;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      margin: 10px 0;
+      color: #2e7d32;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding-left: 10px;
+      border-left: 3px solid transparent;
+    }
+
+    .sidebar a:hover {
+      border-left: 3px solid #8bc34a;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 50px;
+      background: #f9fff9;
+    }
+
+    section {
+      margin-bottom: 70px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      color: #2e7d32;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #8bc34a;
+      padding-bottom: 8px;
+    }
+
+    /* Flex container for image + side content */
+    .content-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    .content-row img {
+      width: 500px;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid #c8e6c9;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    .side-text {
+      flex: 1;
+    }
+
+    .side-text h3 {
+      font-size: 1.3rem;
+      color: #4caf50;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .side-text p,
+    .side-text ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+
+    /* Content below the image-text row */
+    .additional-content {
+      margin-top: 10px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .go-top {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #4caf50;
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    footer {
+      background-color: #f1f8e9;
+      text-align: center;
+      padding: 15px;
+      color: #558b2f;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div>
+      <img src="images/logo1.png" alt="Life on Land logo" class="logo" />
+    </div>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="profile.html">Profile</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="sitemap.html">Sitemap</a>
+      <a href="team.html">Team</a>
+      <a href="content.html" class="active">Content</a>
+    </nav>
+  </header>
+
+  <div class="content-wrapper">
+    <aside class="sidebar">
+      <h3>Navigate</h3>
+      <a href="#student1">Forest Restoration</a>
+      <a href="#student2">Endangered Species</a>
+      <a href="#student3">Green Agriculture</a>
+      <a href="#student4">Urban Sustainability</a>
+    </aside>
+
+    <main class="main-content">
+
+      <section id="student1">
+        <h2>Forest Restoration</h2>
+        <div class="content-row">
+          <img src="images/forest.jpg" alt="Replanted forest area" />
+          <div class="side-text">
+            <h3>Why Reforestation is Urgent</h3>
+            <p>Forest loss not only threatens biodiversity but also affects climate regulation and water cycles globally. Without urgent action, many species face extinction and local communities lose critical resources.
+                Deforestation accelerates soil erosion and increases flood risk.
+                Restoring forests can stabilize local climates and improve rainfall patterns.
+            </p>
+          </div>
+        </div>
+        <div class="additional-content">
+          <h3>Key Techniques</h3>
+          <ul>
+            <li>Assisted natural regeneration involves protecting and nurturing naturally sprouting trees rather than planting alone.</li>
+            <li>Use of native tree species</li>
+            <li>Native species planting ensures better ecosystem integration and resilience.</li>
+            <li>Agroforestry combines trees and crops, enhancing biodiversity while providing economic benefits to farmers.</li>
+            <li>Using mycorrhizal fungi inoculation to improve soil and tree health.</li>
+            <li>Community nurseries help supply seedlings and encourage local stewardship.</li>
+          </ul>
+          <h3>Challenges</h3>
+          <p>Limited funding, lack of local involvement, and soil degradation are key obstacles in successful restoration projects.
+            Climate change makes it difficult to predict which species will thrive.
+            Conflicts over land use, especially where agriculture competes with forestry.Long-term funding and maintenance are often lacking.Political and social instability can halt restoration projects.
+
+
+          </p>
+        </div>
+      </section>
+
+      <section id="student2">
+        <h2>Protecting Endangered Species - Venuja</h2>
+        <div class="content-row">
+          <img src="images/educate.webp" alt="Endangered animals" />
+          <div class="side-text">
+            <h3>Species at Risk</h3>
+            <p>Each endangered species plays a unique role in its ecosystem. Their loss can trigger a cascade of negative effects on other species and habitat health.
+
+Amur Leopards are critically endangered with fewer than 100 left in the wild.
+
+Asian Elephants are vital seed dispersers that maintain forest ecosystems.
+
+Saola, known as the “Asian unicorn,” is one of the world’s rarest mammals, spotted only a few times.</p>
+            <ul>
+              <li>Amur Leopard</li>
+              <li>Asian Elephant</li>
+              <li>Saola (Asian unicorn)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="additional-content">
+          <h3>Habitat Conservation</h3>
+          <p>Wildlife corridors and protected areas enable safer movement and mating for endangered species.
+            Creating wildlife corridors connects fragmented habitats, allowing genetic diversity.
+            Establishing protected areas involves both government and community-led initiatives.Restoration of wetlands and river systems benefits aquatic and terrestrial species.
+          </p>
+          <h3>Community Involvement</h3>
+          <p>Training local people as eco-guards creates jobs and incentives for protection.Community-based tourism can provide income alternatives to poaching.
+            Indigenous knowledge contributes valuable insights into species behavior and habitat management.
+          </p>
+          <ul>
+              <li>Anti-poaching patrols and surveillance technology like drones.</li>
+              <li>Environmental education programs to reduce human-wildlife conflict.</li>
+              <li>International cooperation to tackle cross-border conservation challenges.</li>
+            </ul>
+        </div>
+      </section>
+
+      <section id="student3">
+        <h2>Green Agriculture</h2>
+        <div class="content-row">
+          <img src="images/community.jpg" alt="Sustainable farming methods" />
+          <div class="side-text">
+            <h3>Sustainable Practices</h3>
+            <ul>
+              <li>Crop rotation and soil health preservation</li>
+              <li>Organic and pesticide-free techniques</li>
+              <li>Efficient water management</li>
+            </ul>
+          </div>
+        </div>
+        <div class="additional-content">
+          <h3>Tech Innovations</h3>
+          <p>Use of drones, soil sensors, and data analytics helps optimize yield while minimizing impact on the environment.</p>
+          <h3>Impact on Climate</h3>
+          <p>Sustainable agriculture reduces greenhouse gas emissions and supports local biodiversity.</p>
+        </div>
+      </section>
+
+      <section id="student4">
+        <h2>Urban Sustainability</h2>
+        <div class="content-row">
+          <img src="images/forest1.jpg" alt="Green city space" />
+          <div class="side-text">
+            <h3>Benefits of Urban Green Areas</h3>
+            <ul>
+              <li>Improves air quality and reduces heat</li>
+              <li>Supports urban biodiversity</li>
+              <li>Encourages outdoor activity and mental health</li>
+            </ul>
+          </div>
+        </div>
+        <div class="additional-content">
+          <h3>Smart Design</h3>
+          <p>Green roofs, rain gardens, and eco-zoning create spaces that are environmentally resilient and socially inclusive.</p>
+          <h3>Policy Support</h3>
+          <p>Urban sustainability needs collaboration between planners, citizens, and government to make long-term change.</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <a href="#" class="go-top" title="Back to top">↑</a>
+
+  <footer>
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST1.html">Page Editor - Student 1</a></p>
+  </footer>
+
+</body>
+</html>

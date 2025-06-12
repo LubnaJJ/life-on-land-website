@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team - Life on Land</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f8e9;
+      margin: 0;
+      color: #2e7d32;
+    }
+
+    .container {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .member-card {
+      position: relative;
+      background-color: #fff;
+      width: 250px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .member-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: opacity 0.4s ease;
+    }
+
+    .member-card:hover .member-image {
+      opacity: 0.75;
+    }
+
+    .member-info {
+      padding: 20px;
+    }
+
+    .member-info h3 {
+      margin: 10px 0 5px;
+      color: #33691e;
+    }
+
+    .member-info p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      background-color: #e8f5e9;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .member-card:focus-within .details,
+    .member-card:hover .details {
+      max-height: 200px;
+      padding-top: 15px;
+    }
+
+    .details p {
+      margin: 8px 0;
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    footer {
+      background-color: #558b2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: #c8e6c9;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .member-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="logo-container">
+      <img src="images/logo1.png" alt="Life on Land logo" class="logo" />
+      <h1>Life on Land</h1>
+    </div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="home.html">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="profile.html">Profile</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="sitemap.html">Sitemap</a>
+      <a href="content.html">Content</a>
+      <a href="team.html" class="active">Team</a>
+    </nav>
+  </header>
+
+  <!-- Team Section -->
+  <main class="container">
+    <h1>Meet Our Team</h1>
+    <div class="team-grid">
+      <!-- Member 1 -->
+      <div class="member-card" tabindex="0">
+        <img src="images/aqeel.jpeg" alt="Aqeel - Student 1" class="member-image" />
+        <div class="member-info">
+          <h3>Aqeel</h3>
+          <p>Student 1</p>
+        </div>
+        <div class="details">
+          <p><strong>Role:</strong> Frontend Developer</p>
+          <p><strong>Tasks:</strong> Splash screen, Volunteer page, Feedback system</p>
+        </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="member-card" tabindex="0">
+        <img src="images/aqeel.jpeg" alt="Venuja - Student 2" class="member-image" />
+        <div class="member-info">
+          <h3>Venuja</h3>
+          <p>Student 2</p>
+        </div>
+        <div class="details">
+          <p><strong>Role:</strong> UI Designer & Integrator</p>
+          <p><strong>Tasks:</strong> Home page, Global layout, CSS design</p>
+        </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="member-card" tabindex="0">
+        <img src="images/aqeel.jpeg" alt="Dilakshan - Student 3" class="member-image" />
+        <div class="member-info">
+          <h3>Dilakshan</h3>
+          <p>Student 3</p>
+        </div>
+        <div class="details">
+          <p><strong>Role:</strong> Form & Validation Expert</p>
+          <p><strong>Tasks:</strong> Feedback form, Table page, Accessibility</p>
+        </div>
+      </div>
+
+      <!-- Member 4 -->
+      <div class="member-card" tabindex="0">
+        <img src="images/aqeel.jpeg" alt="Shehan - Student 4" class="member-image" />
+        <div class="member-info">
+          <h3>Shehan</h3>
+          <p>Student 4</p>
+        </div>
+        <div class="details">
+          <p><strong>Role:</strong> Sitemap Architect</p>
+          <p><strong>Tasks:</strong> SVG sitemap, Profile page, Interactivity</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST3.html">Page Editor - Student 3</a></p>
+  </footer>
+</body>
+</html>

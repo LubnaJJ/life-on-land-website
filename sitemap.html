@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitemap - Life on Land</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f8e9;
+      color: #2e7d32;
+    }
+
+    .container {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2e7d32;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .sitemap-wrapper {
+      overflow-x: auto;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    .box {
+      fill: #ffffff;
+      stroke: #8bc34a;
+      stroke-width: 2;
+      rx: 8;
+      ry: 8;
+      transition: fill 0.3s, stroke 0.3s;
+    }
+
+    .box:hover {
+      fill: #dcedc8;
+      stroke: #558b2f;
+      cursor: pointer;
+    }
+
+    .label {
+      font-size: 14px;
+      fill: #2e7d32;
+      pointer-events: none;
+      font-weight: bold;
+    }
+
+    .line {
+      stroke: #a5d6a7;
+      stroke-width: 2;
+    }
+
+    footer {
+      background-color: #558b2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #c8e6c9;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="logo-container">
+      <img src="images/logo1.png" alt="Life on Land logo" class="logo" />
+      <h1>Life on Land</h1>
+    </div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="home.html">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="profile.html">Profile</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="sitemap.html" class="active">Sitemap</a>
+      <a href="content.html">Content</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Website Sitemap</h1>
+    <div class="sitemap-wrapper">
+      <svg viewBox="0 0 1000 400" role="img" aria-label="Site map structure">
+
+        <!-- Connecting Lines -->
+        <line class="line" x1="500" y1="50" x2="500" y2="120" />
+        <line class="line" x1="500" y1="120" x2="100" y2="220" />
+        <line class="line" x1="500" y1="120" x2="250" y2="220" />
+        <line class="line" x1="500" y1="120" x2="400" y2="220" />
+        <line class="line" x1="500" y1="120" x2="600" y2="220" />
+        <line class="line" x1="500" y1="120" x2="750" y2="220" />
+        <line class="line" x1="500" y1="120" x2="900" y2="220" />
+
+        <!-- Splash Screen Node -->
+        <a xlink:href="index.html">
+          <rect class="box" x="450" y="20" width="100" height="40" tabindex="0"><title>Splash Screen</title></rect>
+          <text class="label" x="500" y="45" text-anchor="middle">Splash</text>
+        </a>
+
+        <!-- Home Page Node -->
+        <a xlink:href="home.html">
+          <rect class="box" x="450" y="100" width="100" height="40" tabindex="0"><title>Home Page</title></rect>
+          <text class="label" x="500" y="125" text-anchor="middle">Home</text>
+        </a>
+
+        <!-- Volunteer Page -->
+        <a xlink:href="volunteer.html">
+          <rect class="box" x="50" y="200" width="100" height="40" tabindex="0"><title>Volunteer Page</title></rect>
+          <text class="label" x="100" y="225" text-anchor="middle">Volunteer</text>
+        </a>
+
+        <!-- Table Page -->
+        <a xlink:href="table.html">
+          <rect class="box" x="200" y="200" width="100" height="40" tabindex="0"><title>Table Page</title></rect>
+          <text class="label" x="250" y="225" text-anchor="middle">Table</text>
+        </a>
+
+        <!-- Profile Page -->
+        <a xlink:href="profile.html">
+          <rect class="box" x="350" y="200" width="100" height="40" tabindex="0"><title>Profile Page</title></rect>
+          <text class="label" x="400" y="225" text-anchor="middle">Profile</text>
+        </a>
+
+        <!-- Feedback Page -->
+        <a xlink:href="feedback.html">
+          <rect class="box" x="550" y="200" width="100" height="40" tabindex="0"><title>Feedback Page</title></rect>
+          <text class="label" x="600" y="225" text-anchor="middle">Feedback</text>
+        </a>
+
+        <!-- Team Page -->
+        <a xlink:href="team.html">
+          <rect class="box" x="700" y="200" width="100" height="40" tabindex="0"><title>Team Page</title></rect>
+          <text class="label" x="750" y="225" text-anchor="middle">Team</text>
+        </a>
+
+        <!-- Sitemap Page -->
+        <a xlink:href="sitemap.html">
+          <rect class="box" x="850" y="200" width="100" height="40" tabindex="0"><title>Sitemap Page</title></rect>
+          <text class="label" x="900" y="225" text-anchor="middle">Sitemap</text>
+        </a>
+
+      </svg>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST4.html">Page Editor - Student 4</a></p>
+  </footer>
+
+</body>
+</html>
