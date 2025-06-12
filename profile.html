@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+    
     }
 
     main {
@@ -170,46 +171,9 @@
       background: #33691e;
     }
 
-    footer {
-      background-color: #558b2f;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
+   
 
-    footer a {
-      color: #c8e6c9;
-      text-decoration: underline;
-    }
-
-    .site-header {
-      background-color: #8bc34a;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    .site-header img {
-      height: 50px;
-      margin-right: 15px;
-    }
-
-    nav.main-nav {
-      text-align: center;
-      background-color: #7cb342;
-      padding: 10px;
-    }
-
-    nav.main-nav a {
-      margin: 0 10px;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    nav.main-nav a:hover {
-      text-decoration: underline;
-    }
+ 
 
     .calendar-cell {
   padding: 10px;
@@ -224,17 +188,20 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <img src="images/logo1.png" alt="Logo" />
-    <h1 style="color: white;">User Profile</h1>
+   <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="logo-container">
+      <img src="images/logo1.png" alt="Life on Land logo: tree and nature symbol" class="logo" />
+      <h1>Life on Land</h1>
+    </div>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="home.html">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="team.html">Team</a>
+    </nav>
   </header>
-
-  <nav class="main-nav">
-    <a href="home.html">Home</a>
-    <a href="volunteer.html">Volunteer</a>
-    <a href="content_ST1.html">Content</a>
-    <a href="team.html">Team</a>
-  </nav>
 
   <main>
   <!-- Sidebar -->
@@ -384,7 +351,7 @@
 
 
   <footer>
-    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST4.html">Nuwani’s Page Editor</a></p>
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST4.html">Aqeel's Page Editor</a></p>
   </footer>
 
 </body>

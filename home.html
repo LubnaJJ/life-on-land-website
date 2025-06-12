@@ -5,148 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home - Life on Land</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+      background-color: #f1f8e9;
       color: #2e7d32;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    .loader-wrapper {
-      position: fixed;
-      top: 0; left: 0;
+    .banner {
+      position: relative;
       width: 100%;
-      height: 100%;
-      background-color: #fff;
+      height: 450px;
+      background: url('images/forest.jpg') center/cover no-repeat;
       display: flex;
-      justify-content: center;
       align-items: center;
-      z-index: 1000;
+      justify-content: center;
     }
 
-    .loader {
-      border: 8px solid #c8e6c9;
-      border-top: 8px solid #388e3c;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
+    .banner h1 {
+      color: white;
+      font-size: 2.8rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     }
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    
     .container {
-      padding: 50px 30px;
-      text-align: center;
-      animation: fadeIn 1.5s ease;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    .mission {
-      font-size: 1.2rem;
-      background-color: #c8e6c9;
-      padding: 20px 30px;
-      margin: 0 auto 40px;
+    .mission-card {
+      background-color: white;
       border-left: 6px solid #388e3c;
-      border-radius: 12px;
-      max-width: 900px;
-      font-weight: 500;
-      color: #1b5e20;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.2s ease;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .mission-card i {
+      font-size: 2.5rem;
+      color: #66bb6a;
+      margin-top: 4px;
+    }
+
+    .mission-content h2 {
+      margin: 0;
+      color: #33691e;
+      font-size: 1.8rem;
+    }
+
+    .mission-content p {
+      margin-top: 10px;
+      color: #444;
+      font-size: 1.05rem;
       line-height: 1.6;
     }
 
-    h2 {
-      font-size: 2rem;
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    h2::after {
-      content: '';
-      width: 60px;
-      height: 4px;
-      background-color: #66bb6a;
-      display: block;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-
-    .tiles {
+    .topic-card {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .tile {
-      background-color: #ffffff;
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      width: 220px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      text-decoration: none;
+      animation: fadeIn 1s ease;
     }
 
-    .tile:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    .topic-image {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      min-height: 240px;
     }
 
-    .tile img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
+    .topic-content {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .tile p {
-      margin: 0;
-      padding: 15px;
-      font-weight: bold;
-      color: #2e7d32;
+    .topic-content h2 {
+      margin-top: 0;
+      font-size: 1.8rem;
+      color: #33691e;
+    }
+
+    .topic-content p {
       font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
     }
 
-    footer {
-      background-color: #f1f8e9;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-      color: #558b2f;
+    .next-btn {
+      align-self: flex-end;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #8bc34a;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    footer a {
-      color: #558b2f;
-      text-decoration: underline;
+    .next-btn:hover {
+      background-color: #558b2f;
     }
+
+   
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .topic-card {
+        flex-direction: column;
+      }
+
+      .topic-image {
+        height: 200px;
+      }
+
+      .mission-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .mission-card i {
+        margin-bottom: 10px;
+      }
     }
   </style>
 
   <script>
-    window.addEventListener('load', () => {
-      const loader = document.querySelector('.loader-wrapper');
-      loader.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    });
+    const topics = [
+      {
+        title: "Forest Conservation",
+        description: "Preserving forests is critical to climate balance, wildlife habitats, and biodiversity. Learn how sustainable forestry and reforestation efforts make a difference.",
+        image: "images/forest.jpg",
+        link: "content_ST1.html"
+      },
+      {
+        title: "Biodiversity Awareness",
+        description: "Explore the importance of biodiversity and the need to protect endangered species and their ecosystems for a healthy planet.",
+        image: "images/biodiversity.jpg",
+        link: "content_ST2.html"
+      },
+      {
+        title: "Land Restoration",
+        description: "From desertification to deforestation, discover how degraded lands can be restored through ecological and community-driven practices.",
+        image: "images/land.jpeg",
+        link: "content_ST3.html"
+      },
+      {
+        title: "Community Engagement",
+        description: "Empowering communities is key to sustainable land management. Learn how education, outreach, and local action drive global impact.",
+        image: "images/community.jpg",
+        link: "content_ST4.html"
+      }
+    ];
+
+    let current = 0;
+
+    function showTopic(index) {
+      const topic = topics[index];
+      document.querySelector('.topic-image').style.backgroundImage = `url('${topic.image}')`;
+      document.querySelector('.topic-content h2').textContent = topic.title;
+      document.querySelector('.topic-content p').textContent = topic.description;
+      document.querySelector('.next-btn').onclick = () => {
+        if (index + 1 < topics.length) {
+          showTopic(index + 1);
+        } else {
+          window.location.href = topic.link;
+        }
+      };
+    }
+
+    window.onload = () => {
+      showTopic(current);
+    };
   </script>
 </head>
 <body>
-
-  <!-- Animated Loader -->
-  <div class="loader-wrapper">
-    <div class="loader"></div>
-  </div>
 
   <!-- Header -->
   <header class="site-header" role="banner">
@@ -163,35 +223,36 @@
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main class="container">
-    <div class="mission" aria-label="Website Mission">
-      We are committed to supporting <strong>UN Sustainable Development Goal 15: Life on Land</strong>, by raising awareness and encouraging real action toward reforestation, biodiversity conservation, and land restoration. Our platform provides engaging and accessible content to educate communities and promote sustainable land use practices globally and locally. By connecting volunteers, sharing knowledge, and showcasing impact stories, we aim to inspire collective responsibility to restore Earth’s ecosystems.
-    </div>
+  <!-- Banner -->
+  <div class="banner">
+    <h1>Explore Our Topics</h1>
+  </div>
 
-    <h2>Explore Our Topics</h2>
-    <div class="tiles" role="navigation" aria-label="Topic Navigation">
-      <a href="content_ST1.html" class="tile">
-        <img src="images/forest.jpg" alt="Forest Conservation image" />
-        <p>Forest Conservation</p>
-      </a>
-      <a href="content_ST2.html" class="tile">
-        <img src="images/biodiversity.jpg" alt="Biodiversity Awareness image" />
-        <p>Biodiversity Awareness</p>
-      </a>
-      <a href="content_ST3.html" class="tile">
-        <img src="images/land.jpeg" alt="Land Restoration image" />
-        <p>Land Restoration</p>
-      </a>
-      <a href="content_ST4.html" class="tile">
-        <img src="images/community.jpg" alt="Community Engagement image" />
-        <p>Community Engagement</p>
-      </a>
+  <!-- Mission -->
+  <main class="container">
+    <div class="mission-card">
+      <i class="fas fa-seedling" aria-hidden="true"></i>
+      <div class="mission-content">
+        <h2>Our Mission</h2>
+        <p>
+          We are committed to supporting <strong>UN Sustainable Development Goal 15: Life on Land</strong>, by raising awareness and encouraging real action toward reforestation, biodiversity conservation, and land restoration. Our platform provides engaging and accessible content to educate communities and promote sustainable land use practices globally and locally. By connecting volunteers, sharing knowledge, and showcasing impact stories, we aim to inspire collective responsibility to restore Earth’s ecosystems.
+        </p>
+      </div>
     </div>
   </main>
 
+  <!-- Topic Card -->
+  <section class="topic-card">
+    <div class="topic-image"></div>
+    <div class="topic-content">
+      <h2>Loading...</h2>
+      <p>Please wait while we load the topic.</p>
+      <button class="next-btn">Next Topic →</button>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer role="contentinfo">
+  <footer>
     <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST2.html">Page Editor - Student 2</a></p>
   </footer>
 
