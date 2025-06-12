@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback - Life on Land</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f8e9;
+      margin: 0;
+      color: #2e7d32;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    fieldset {
+      border: 2px solid #c8e6c9;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #33691e;
+      padding: 0 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+      font-family: inherit;
+    }
+
+    textarea[maxlength] {
+      resize: vertical;
+    }
+
+    .char-counter {
+      font-size: 0.85rem;
+      color: #777;
+      text-align: right;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 1.8rem;
+      margin-top: 10px;
+    }
+
+    .rating span {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .rating span:hover {
+      transform: scale(1.3);
+    }
+
+    .options-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .options-group label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    input:invalid {
+      border-color: red;
+    }
+
+    input:invalid:focus {
+      outline: none;
+      box-shadow: 0 0 4px red;
+    }
+
+    .submit-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      background: #388e3c;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 0 10px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #2e7d32;
+    }
+
+    footer {
+      background-color: #558b2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #c8e6c9;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function updateCounter() {
+      const textarea = document.getElementById("message");
+      const counter = document.getElementById("counter");
+      const max = textarea.getAttribute("maxlength");
+      counter.textContent = `${max - textarea.value.length} characters remaining`;
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header (integrate as needed) -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="images/logo1.png" alt="Life on Land Logo" class="logo" />
+      <h1>Life on Land</h1>
+    </div>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="table.html">Table</a>
+      <a href="profile.html">Profile</a>
+      <a href="feedback.html" class="active">Feedback</a>
+      <a href="team.html">Team</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>We’d Love Your Feedback</h2>
+    <form>
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required title="Please enter your full name.">
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required title="Please enter a valid email.">
+
+        <label for="phone">Telephone Number *</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Enter a 10-digit number">
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3"></textarea>
+
+        <label for="date">Date of Submission</label>
+        <input type="date" id="date" name="date">
+
+        <label for="datetime">Preferred Contact Date/Time</label>
+        <input type="datetime-local" id="datetime" name="datetime">
+      </fieldset>
+
+      <fieldset>
+        <legend>Feedback Details</legend>
+
+        <label for="interest">What brought you here?</label>
+        <select id="interest" name="interest">
+          <option>Choose...</option>
+          <option>Volunteering</option>
+          <option>Learning about forests</option>
+          <option>SDG Projects</option>
+        </select>
+
+        <label for="topic">Select topics of interest</label>
+        <select id="topic" name="topics" size="3" multiple>
+          <option>Reforestation</option>
+          <option>Biodiversity</option>
+          <option>Eco Education</option>
+          <option>Land Conservation</option>
+        </select>
+
+        <label for="region">Region</label>
+        <input list="regions" id="region" name="region" placeholder="Search...">
+        <datalist id="regions">
+          <option value="Asia">
+          <option value="Africa">
+          <option value="Europe">
+          <option value="South America">
+        </datalist>
+
+        <label>How did you hear about us?</label>
+        <div class="options-group">
+          <label><input type="checkbox" name="source" value="friend" /> Friend</label>
+          <label><input type="checkbox" name="source" value="web" /> Web Search</label>
+          <label><input type="checkbox" name="source" value="social" /> Social Media</label>
+        </div>
+
+        <label>Would you like to volunteer again?</label>
+        <div class="options-group">
+          <label><input type="radio" name="return" value="yes" required /> Yes</label>
+          <label><input type="radio" name="return" value="no" /> No</label>
+        </div>
+
+        <label for="message">Comment or Message</label>
+        <textarea id="message" name="message" rows="4" maxlength="200" oninput="updateCounter()"></textarea>
+        <div class="char-counter" id="counter">200 characters remaining</div>
+
+        <label for="file">Upload File (PDF or Image)</label>
+        <input type="file" id="file" name="file" accept=".pdf,image/*">
+      </fieldset>
+
+      <fieldset>
+        <legend>Rate Your Experience</legend>
+        <div class="rating">
+          <span>😞</span>
+          <span>😐</span>
+          <span>🙂</span>
+          <span>😊</span>
+          <span>😍</span>
+        </div>
+      </fieldset>
+
+      <div class="submit-buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Life on Land Team | <a href="pageEditor_ST3.html">Dilakshan’s Page Editor</a></p>
+  </footer>
+</body>
+</html>
